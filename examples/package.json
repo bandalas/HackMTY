@@ -1,0 +1,20 @@
+{
+  "name": "wdc-examples",
+  "version": "1.0.0",
+  "description": "Examples of using the IBM Watson Developer Cloud Node.js SDK",
+  "private": true,
+  "license": "Apache-2.0",
+  "dependencies": {
+    "async": "^2.1.4",
+    "body-parser": "^1.17.2",
+    "dotenv": "^2.0.0",
+    "express": "^4.15.4",
+    "hotnode": "0.0.8",
+    "speaker": "^0.3.0",
+    "watson-developer-cloud": "*",
+    "wav": "^1.0.1"
+  },
+  "engines": {
+    "node": ">=4"
+  }
+}
