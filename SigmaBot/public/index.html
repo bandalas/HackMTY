@@ -1,0 +1,1009 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+      <title>Conversation Chat App</title>
+      <link href="css/app.css" rel="stylesheet">
+      <link href="assets/css/styles.css" rel="stylesheet" type="text/css" />
+      <link href="assets/css/tiptip.css" rel="stylesheet" type="text/css" />
+      <link href="assets/css/socialist.css" rel="stylesheet" type="text/css" />
+      <link href="assets/css/dcsns_wall.css" rel="stylesheet" type="text/css" />
+      <link href="assets/css/dropkick.css" rel="stylesheet" type="text/css" />
+      <link href="assets/css/fancybox.css" rel="stylesheet" type="text/css" />
+      <link href="assets/css/scroll.css" rel="stylesheet" type="text/css" />
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
+      <html lang ="es" >
+      <meta charset="UTF-8">
+   </head>
+   <body>
+      <!-- a Header -->
+      <div id='all'>
+        <div id="my-Modal karla" class="modal">
+          <div class="nav-wrap">
+            <div class='nav-stuff'> 
+                <ul>
+                  <li><span class="main-tit">¿Problemas con?</span></li>
+                  <li class="contr"><span class="first">C</span>ontraseña</li>
+                  <li class="sap"><span class="first">S</span>AP</li>
+                  <li class="corr"><span class="first">C</span>orreo</li>
+                  <li class="ped"><span class="first">P</span>edidos</li>
+                  <li class="fact"><span class="first">F</span>acturas</li>
+                </ul>
+            </div>
+          </div>
+          <div class="modal-content">
+            <span class="close">&times;</span>
+             <div id="contentParent" class="responsive-columns-wrapper">
+                <div id="chat-column-holder" class="responsive-column content-column">
+                   <div class="chat-column">
+                      <div id="scrollingChat"></div>
+                      <label for="textInput" class="inputOutline">
+                      <input id="textInput" class="input responsive-column"
+                         placeholder="Ingresa algo" type="text"
+                         onkeydown="ConversationPanel.inputKeyDown(event, this)">
+                      </label>
+                   </div>
+                </div>
+             </div>
+             <div id='menu-drop'>             
+
+             </div>
+          </div>
+        </div>
+        <div id='popup' class="popup">
+          <p class='po'>Chat</p>
+        </div>
+        <div id="rest-content" class="restx">
+          <div id="header">
+             <div class="main clearfix">
+                <a href="index.html#home" id="logo" class="page-link">Sigma Alimentos</a>
+                <div id="head-left">
+                   <div id="head-top">
+                      <div class="floatR"><span id="en" class="floatR"></span><strong class="floatR">/</strong><a href="index.php.html" id="es"></a></div>
+                   </div>
+                   <ul id="nav" class="clearfix">
+                      <li class="current"><a class="page-link" href="index.html#home">Home</a></li>
+                      <li><a class="page-link" href="index.html#nuestros-productos">Our Products</a></li>
+                      <li><a class="page-link" href="index.html#quienes-somos">About Us</a></li>
+                      <li><a class="page-link" href="index.html#en-accion">In Action</a></li>
+                      <li><a class="page-link" href="index.html#contacto">Contact</a></li>
+                   </ul>
+                </div>
+                <div id="head-right">
+                   <div id="search">
+                      <form id="search_form" name="search_form" method="post"><input type="text" name="texto" id="texto" style="color:#000;"><input name="idioma" id="idioma" value="i" type="hidden" /><button type="submit"></button></form>
+                   </div>
+                   <div class="page-link" href="#inversionistas-i" id="stocks">
+                      <div class="cont"><span>INVESTOR RELATIONS</span></div>
+                   </div>
+                </div>
+             </div>
+          </div>
+          <!-- O Header -->
+          <!-- a Social Media -->
+          <div id="social-media" class="clearfix">
+             <div class="clearfix">
+                <a href="index.html#contacto" class="btn orange page-link">Write us</a>
+                <a href="index.html#contacto" id="mail" class="icon page-link"></a>
+             </div>
+             <div class="clearfix">
+                <a href="https://www.facebook.com/SigmaAlimentos" target="_blank" class="btn blue">Like</a>
+                <a href="https://www.facebook.com/SigmaAlimentos" target="_blank" id="fb" class="icon"></a>
+             </div>
+             <!--
+                <div class="clearfix">
+                  <a href="#" class="btn red">Watch videos</a>
+                  <a href="#" id="yt" class="icon"></a>
+                </div>
+                -->
+          </div>
+          <!-- O Social Media -->
+          <!-- a Content -->
+          <div class="main relative" id="cont">
+             <!-- a Search Results -->
+             <div id="search-results" align="left">
+             </div>
+             <!-- O Search Results -->   
+             <!-- a Home Slider -->
+             <div class="section" id="block-home">
+                <a href="index.html#nuestros-productos" class="next-block page-link"></a>
+                <div class="btns"><a class="prev" id="prev-home"></a><a class="next" id="next-home"></a></div>
+                <div class="iosSlider" id="home-slider">
+                   <ul class="slider">
+                      <div class="slide" align="center" style="background:url('assets/img/cms/stages/35.jpg') center 0 no-repeat;">
+                         <div class="cont trans-purple">
+                            <div class="relative">
+                               <h1 class="title">Our Commitments</h1>
+                               <h1 class="title sombra">Our Commitments</h1>
+                               <strong>We envision a world where every person can choose to enjoy food that is healthy, affordable and sustainable. We’re happy to join forces with other companies and be part of the solution!</strong>
+                               <a href="index.html#en-accion-i" class="btn red page-link">More info</a>
+                            </div>
+                         </div>
+                      </div>
+                      <div class="slide" align="center" style="background:url('assets/img/cms/stages/22.jpg') center 0 no-repeat;">
+                         <div class="cont trans-purple">
+                            <div class="relative">
+                               <h1 class="title">Our Promise</h1>
+                               <h1 class="title sombra">Our Promise</h1>
+                               <strong>We are compelled by the “Excellence in Execution” model to be available upon our customer’s request in every place, instance and presentation.</strong>
+                               <a href="index.html#quienes-somos-i" class="btn red page-link">View more</a>
+                            </div>
+                         </div>
+                      </div>
+                      <div class="slide" align="center" style="background:url('assets/img/cms/stages/29.jpg') center 0 no-repeat;">
+                         <div class="cont trans-purple">
+                            <div class="relative">
+                               <h1 class="title">Our Brands</h1>
+                               <h1 class="title sombra">Our Brands</h1>
+                               <strong>Sigma has inherited the legacy of recognised brands that have enjoyed the consumer preference for over 70 years.</strong>
+                               <a href="index.html" class="btn red page-link"></a>
+                            </div>
+                         </div>
+                      </div>
+                   </ul>
+                </div>
+                <div class="divider" id="div01" align="left"><img src="assets/img/bg/div-01.png" alt="" ></div>
+                <div class="divider" id="div02"><img src="assets/img/bg/div-02.png" alt=""></div>
+                <!--<div class="divider"><img src="assets/img/bg/divider-01b.png" alt=""></div>-->
+             </div>
+             <!-- O Home Slider -->    
+             <!-- a Products -->
+             <div class="section" id="block-products">
+                <a href="index.html#block-aboutus" class="next-block"></a>
+                <div class="wrapper">
+                   <div id="bg-frame01"></div>
+                   <div id="bg-frame02"></div>
+                </div>
+                <div class="center relative">
+                   <!-- <img src="assets/img/photos/milk.png" id="milk" style="position:absolute; right:-200px; top:0;"> -->
+                   <h1 class="title">OUR PRODUCTS</h1>
+                   <div id="product-list" align="center">
+                      <div class="product" id="p01">
+                         <img src="assets/img/cms/categorias/1.png" width="269" height="269" alt="">
+                         <div class="cont">
+                            <h1 class="margin15b"><strong>Cooked and<br>Dry Meats</strong></h1>
+                            <a class="btn width50 orange margin15b page-link" href="index.html#carnes-frias">View more</a>
+                            <a class="btn width50 orange page-link" href="index.html#receta-carnes-frias">Recipe</a>
+                         </div>
+                      </div>
+                      <div class="product" id="p02">
+                         <img src="assets/img/cms/categorias/2.png" width="269" height="269" alt="">
+                         <div class="cont">
+                            <h1 class="margin30b"><strong>Cheese</strong></h1>
+                            <a href="index.html#quesos" class="btn width50 orange margin15b page-link">View more</a>
+                            <a href="index.html#receta-quesos" class="btn width50 orange page-link">Recipe</a>
+                         </div>
+                      </div>
+                      <div class="product" id="p03">
+                         <img src="assets/img/cms/categorias/3.png" width="269" height="269" alt="">
+                         <div class="cont">
+                            <h1 class="margin30b"><strong>Yoghurt</strong></h1>
+                            <a href="index.html#yoghurts" class="btn width50 orange margin15b page-link">View more</a>
+                         </div>
+                      </div>
+                      <div class="product" id="p04">
+                         <img src="assets/img/cms/categorias/4.png" width="269" height="269" alt="">
+                         <div class="cont">
+                            <h1 class="margin30b"><strong>Dairy</strong></h1>
+                            <a href="index.html#lacteos" class="btn width50 orange margin15b page-link">View more</a>
+                            <a href="index.html#receta-lacteos" class="btn width50 orange page-link">Recipe</a>
+                         </div>
+                      </div>
+                      <div class="product" id="p05">
+                         <img src="assets/img/cms/categorias/5.png" width="269" height="269" alt="">
+                         <div class="cont">
+                            <h1 class="margin15b"><strong>Foods</strong></h1>
+                            <a href="index.html#alimentos" class="btn width50 orange margin15b page-link">View more</a>
+                         </div>
+                      </div>
+                      <div class="product" id="p06">
+                         <img src="assets/img/cms/categorias/6.png" width="269" height="269" alt="">
+                         <div class="cont">
+                            <h1 class="margin30b"><strong>Meats</strong></h1>
+                            <a href="index.html#carnes" class="btn width50 orange margin15b page-link">View more</a>
+                         </div>
+                      </div>
+                      <div id="foodservice" class="clearfix">
+                         <div class="width60 floatL padding5t" align="right">
+                            <p class="font16 fontwhite"><strong>Meet our variety in Foodservice:</strong></p>
+                         </div>
+                         <a href="http://www.sigma-foodservice.com" target="_blank" class="floatR"><img src="assets/img/btns/foodservice.png" height="55" width="120" alt="Foodservice" /></a>
+                      </div>
+                   </div>
+                   <div id="product-detail">
+                      <div class="relative" id="tab-products">
+                         <ul id="product-menu" class="tabs_links">
+                            <li><a href="index.html#prod-01" title="Cooked and<br>Dry Meats" class="tiptip" id="prod01" rel="1"></a></li>
+                            <li><a href="index.html#prod-02" title="Cheese" class="tiptip" id="prod02" rel="2"></a></li>
+                            <li><a href="index.html#prod-03" title="Yoghurt" class="tiptip" id="prod03" rel="3"></a></li>
+                            <li><a href="index.html#prod-04" title="Dairy" class="tiptip" id="prod04" rel="4"></a></li>
+                            <li><a href="index.html#prod-05" title="Foods" class="tiptip" id="prod05" rel="5"></a></li>
+                            <li><a href="index.html#prod-06" title="Meats" class="tiptip" id="prod06" rel="6"></a></li>
+                         </ul>
+                         <div id="prod-01" class="tabs_cont">
+                            <div class="clearfix product-detail">
+                               <a href="index.html#nuestros-productos" class="tiptip page-link prod-menu" title="Back"></a>
+                               <div id="prod-detail01">
+                                  <div class="tcont" id="info01">
+                                     <div class="floatL width35 relative">
+                                        <img src="assets/img/cms/categorias/1.png" width="269" height="269" alt="Cooked and<br>Dry Meats">
+                                     </div>
+                                     <div class="width60 floatL padding15t">
+                                        <h1 class="margin15b">Cooked and Dry Meats</h1>
+                                        <p class="margin15b">Sigma produces and sells cooked and dry hams and sausages, bologna, and bacon among other products. Our brands are widely known among consumers, since they are focused on satisfying the needs in each segment of the selected market. Some of them have more than 70 years of tradition.</p>
+                                     </div>
+                                  </div>
+                                  <div class="tcont" id="recipe01">
+                                     <div class="floatL width35 relative">
+                                        <img src="assets/img/cms/recetas/6.png" width="269" height="269" alt="Lasagna envuelta con Jamón, Queso y Espinacas ">
+                                     </div>
+                                     <div class="width60 floatL padding15t">
+                                        <h1>Lasagna covered with Ham, Cheese and Spinach</h1>
+                                        <div class="nano margin15b">
+                                           <div class="content clearfix">
+                                              <div class="width45 floatL">
+                                                 <p>Ingredients:</p>
+                                                 <p>8 sheets of lasagna
+                                                    <br />8 slices of ham
+                                                    <br />2 ½ cups of cottage cheese
+                                                    <br />1 package fresh spinach
+                                                    <br />1 cup shredded gouda cheese
+                                                    <br />Water and salt to boil the pasta
+                                                    <br />Salt and Pepper to taste
+                                                    <br />Tomato sauce
+                                                 </p>
+                                              </div>
+                                              <div class="width50 floatR">
+                                                 <p>Preparation:</p>
+                                                 <p>Set the oven in 375ªF. Boil the fresh spinach leaves with a little water and salt until they reduce. Take them out of the water and dry with a towel. Once they are dry, cut into small pieces, mix very well with cottage cheese and add salt and pepper to taste. Cover the bottom of pan with tomato sauce. Cut the ham in slices similar to the lasagna sheets. Spread a bit of the cottage cheese and spinach on the pasta and top with a slice of ham. Carefully roll the pasta until if forms a small roll; place on mold and cover with more tomato sauce. Spread with shredded gouda cheese and cover with aluminum paper. Place in previously heated oven during 30 minutes, remove the aluminum paper and bake for 15 more minutes so the cheese melts and the pasta browns.</p>
+                                              </div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                  </div>
+                                  <ul class="clearfix">
+                                     <li><a href="index.html#info01" class="btn orange width30 floatL brdot">Information</a></li>
+                                     <li><a href="index.html#recipe01" class="btn orange width25 floatL">Recipe of the week</a></li>
+                                  </ul>
+                               </div>
+                            </div>
+                            <div class="relative brands-wrap">
+                               <a class="prev" id="prev-brands01"></a><a class="next" id="next-brands01"></a>
+                               <div class="brands-slider">
+                                  <div class="iosSlider" id="brands-slider01">
+                                     <ul class="slider">
+                                        <li class="slide">
+                                           <a href="index.html#" rel="1_1_i"><img src="assets/img/cms/marcas/1.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="1_7_i"><img src="assets/img/cms/marcas/7.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="1_15_i"><img src="assets/img/cms/marcas/15.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="1_3_i"><img src="assets/img/cms/marcas/3.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="1_14_i"><img src="assets/img/cms/marcas/14.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="1_4_i"><img src="assets/img/cms/marcas/4.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="1_13_i"><img src="assets/img/cms/marcas/13.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="1_5_i"><img src="assets/img/cms/marcas/5.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="1_16_i"><img src="assets/img/cms/marcas/16.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="1_27_i"><img src="assets/img/cms/marcas/27.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="1_12_i"><img src="assets/img/cms/marcas/12.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="1_47_i"><img src="assets/img/cms/marcas/47.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="1_45_i"><img src="assets/img/cms/marcas/45.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="1_44_i"><img src="assets/img/cms/marcas/44.gif"></a>
+                                        </li>
+                                     </ul>
+                                  </div>
+                               </div>
+                               <div class="brand-detail" id="detalle_marca_cat1"></div>
+                            </div>
+                         </div>
+                         <div id="prod-02" class="tabs_cont">
+                            <div class="clearfix product-detail">
+                               <a href="index.html#nuestros-productos" class="tiptip page-link prod-menu" title="Back"></a>
+                               <div id="prod-detail02">
+                                  <div class="tcont" id="info02">
+                                     <div class="floatL width35 relative">
+                                        <img src="assets/img/cms/categorias/2.png" width="269" height="269" alt="Cheese">
+                                     </div>
+                                     <div class="width60 floatL padding15t">
+                                        <h1 class="margin15b">Cheese</h1>
+                                        <p class="margin15b">In 1993, Sigma started developing the cheese business as part of its strengtheing of the product portfolio. The cheese line has international products such as fresh, matured, and processed cheese.</p>
+                                     </div>
+                                  </div>
+                                  <div class="tcont" id="recipe02">
+                                     <div class="floatL width35 relative">
+                                        <img src="assets/img/cms/recetas/7.png" width="269" height="269" alt="Rajas con Queso">
+                                     </div>
+                                     <div class="width60 floatL padding15t">
+                                        <h1>Sliced Peppers with Cheese</h1>
+                                        <div class="nano margin15b">
+                                           <div class="content clearfix">
+                                              <div class="width45 floatL">
+                                                 <p>Ingredients:</p>
+                                                 <p>250 g panela cheese
+                                                    <br />1/2 stick margarine
+                                                    <br />200 g cream
+                                                    <br />5 poblano peppers grilled
+                                                    <br />1 finely chopped onion
+                                                    <br />1/2 teaspoon salt
+                                                    <br />1/2 teaspoon oregano
+                                                    <br />5 epazote leaves finely chopped
+                                                    <br />4 cups tomato sauce seasoned
+                                                 </p>
+                                              </div>
+                                              <div class="width50 floatR">
+                                                 <p>Preparation:</p>
+                                                 <p>Peel the poblano peppers, remove seeds and cut into slices. Fry the onions with the margarine, when they are soft and clear add the pepper slices, salt, oregano and epazote: let cook for three minutes. Add tomato sauce and let boil for five minutes. Serve pepper slices and spread with panela cheese as well as cream. Serve with refried beans and hot tortillas
+                                                    <br />
+                                                 </p>
+                                              </div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                  </div>
+                                  <ul class="clearfix">
+                                     <li><a href="index.html#info02" class="btn orange width30 floatL brdot">Information</a></li>
+                                     <li><a href="index.html#recipe02" class="btn orange width25 floatL">Recipe of the week</a></li>
+                                  </ul>
+                               </div>
+                            </div>
+                            <div class="relative brands-wrap">
+                               <a class="prev" id="prev-brands02"></a><a class="next" id="next-brands02"></a>
+                               <div class="brands-slider">
+                                  <div class="iosSlider" id="brands-slider02">
+                                     <ul class="slider">
+                                        <li class="slide">
+                                           <a href="index.html#" rel="2_24_i"><img src="assets/img/cms/marcas/24.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="2_18_i"><img src="assets/img/cms/marcas/18.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="2_22_i"><img src="assets/img/cms/marcas/22.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="2_20_i"><img src="assets/img/cms/marcas/20.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="2_19_i"><img src="assets/img/cms/marcas/19.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="2_21_i"><img src="assets/img/cms/marcas/21.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="2_27_i"><img src="assets/img/cms/marcas/27.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="2_26_i"><img src="assets/img/cms/marcas/26.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="2_23_i"><img src="assets/img/cms/marcas/23.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="2_25_i"><img src="assets/img/cms/marcas/25.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="2_44_i"><img src="assets/img/cms/marcas/44.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="2_46_i"><img src="assets/img/cms/marcas/46.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="2_49_i"><img src="assets/img/cms/marcas/49.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="2_50_i"><img src="assets/img/cms/marcas/50.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="2_51_i"><img src="assets/img/cms/marcas/51.gif"></a>
+                                        </li>
+                                     </ul>
+                                  </div>
+                               </div>
+                               <div class="brand-detail" id="detalle_marca_cat2"></div>
+                            </div>
+                         </div>
+                         <div id="prod-03" class="tabs_cont">
+                            <div class="clearfix product-detail">
+                               <a href="index.html#nuestros-productos" class="tiptip page-link prod-menu" title="Back"></a>
+                               <div id="prod-detail03">
+                                  <div class="tcont" id="info03">
+                                     <div class="floatL width35 relative">
+                                        <img src="assets/img/cms/categorias/3.png" width="269" height="269" alt="Yoghurt">
+                                     </div>
+                                     <div class="width60 floatL padding15t">
+                                        <h1 class="margin15b">Yoghurt</h1>
+                                        <p class="margin15b">Sigma started in the yogurt market in Mexico in 1994, through a franchise agreement with Sodima Internacional, French company owner of the "Yoplait" brand. We manufacture yogurt products in a great assortment of flavors and presentations such as yogurt with fruit and natural, drinkable yogurt, among others.</p>
+                                     </div>
+                                  </div>
+                                  <div class="tcont" id="recipe03">
+                                     <div class="floatL width35 relative">
+                                     </div>
+                                     <div class="width60 floatL padding15t">
+                                        <h1></h1>
+                                        <div class="nano margin15b">
+                                           <div class="content clearfix">
+                                              <div class="width45 floatL">
+                                                 <p>Ingredients:</p>
+                                                 <p></p>
+                                              </div>
+                                              <div class="width50 floatR">
+                                                 <p>Preparation:</p>
+                                                 <p></p>
+                                              </div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                  </div>
+                               </div>
+                            </div>
+                            <div class="relative brands-wrap">
+                               <a class="prev" id="prev-brands03"></a><a class="next" id="next-brands03"></a>
+                               <div class="brands-slider">
+                                  <div class="iosSlider" id="brands-slider03">
+                                     <ul class="slider">
+                                        <li class="slide">
+                                           <a href="index.html#" rel="3_28_i"><img src="assets/img/cms/marcas/28.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="3_29_i"><img src="assets/img/cms/marcas/29.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="3_30_i"><img src="assets/img/cms/marcas/30.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="3_32_i"><img src="assets/img/cms/marcas/32.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="3_31_i"><img src="assets/img/cms/marcas/31.gif"></a>
+                                        </li>
+                                     </ul>
+                                  </div>
+                               </div>
+                               <div class="brand-detail" id="detalle_marca_cat3"></div>
+                            </div>
+                         </div>
+                         <div id="prod-04" class="tabs_cont">
+                            <div class="clearfix product-detail">
+                               <a href="index.html#nuestros-productos" class="tiptip page-link prod-menu" title="Back"></a>
+                               <div id="prod-detail04">
+                                  <div class="tcont" id="info04">
+                                     <div class="floatL width35 relative">
+                                        <img src="assets/img/cms/categorias/4.png" width="269" height="269" alt="Dairy">
+                                     </div>
+                                     <div class="width60 floatL padding15t">
+                                        <h1 class="margin15b">Dairy</h1>
+                                        <p class="margin15b">In order to complement the dairy category, Sigma added other products to its portfolio such as: cream, margarine, and butter.
+                                           <br />
+                                        </p>
+                                     </div>
+                                  </div>
+                                  <div class="tcont" id="recipe04">
+                                     <div class="floatL width35 relative">
+                                        <img src="assets/img/cms/recetas/8.png" width="269" height="269" alt="Dip Fiesta">
+                                     </div>
+                                     <div class="width60 floatL padding15t">
+                                        <h1>Fiesta Dip</h1>
+                                        <div class="nano margin15b">
+                                           <div class="content clearfix">
+                                              <div class="width45 floatL">
+                                                 <p>Ingredients:</p>
+                                                 <p>250 g double cream cheese
+                                                    <br />200 g cream
+                                                    <br />2 tablespoons finely chopped onions
+                                                    <br />2 tablespoons finely chopped fresh epazote
+                                                    <br />1/2 teaspoon salt
+                                                    <br />
+                                                 </p>
+                                              </div>
+                                              <div class="width50 floatR">
+                                                 <p>Preparation:</p>
+                                                 <p>Whip the double cream cheese and cream until it has a homogeneous mix. Incorporate the finely chopped onion and epazote. Pour in a container and place in the center of a dish, served with toasted tortillas for tasting.
+                                                    <br />
+                                                    <br />
+                                                 </p>
+                                              </div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                  </div>
+                                  <ul class="clearfix">
+                                     <li><a href="index.html#info04" class="btn orange width30 floatL brdot">Information</a></li>
+                                     <li><a href="index.html#recipe04" class="btn orange width25 floatL">Recipe of the week</a></li>
+                                  </ul>
+                               </div>
+                            </div>
+                            <div class="relative brands-wrap">
+                               <a class="prev" id="prev-brands04"></a><a class="next" id="next-brands04"></a>
+                               <div class="brands-slider">
+                                  <div class="iosSlider" id="brands-slider04">
+                                     <ul class="slider">
+                                        <li class="slide">
+                                           <a href="index.html#" rel="4_48_i"><img src="assets/img/cms/marcas/48.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="4_38_i"><img src="assets/img/cms/marcas/38.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="4_40_i"><img src="assets/img/cms/marcas/40.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="4_39_i"><img src="assets/img/cms/marcas/39.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="4_44_i"><img src="assets/img/cms/marcas/44.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="4_46_i"><img src="assets/img/cms/marcas/46.gif"></a>
+                                        </li>
+                                     </ul>
+                                  </div>
+                               </div>
+                               <div class="brand-detail" id="detalle_marca_cat4"></div>
+                            </div>
+                         </div>
+                         <div id="prod-05" class="tabs_cont">
+                            <div class="clearfix product-detail">
+                               <a href="index.html#nuestros-productos" class="tiptip page-link prod-menu" title="Back"></a>
+                               <div id="prod-detail05">
+                                  <div class="tcont" id="info05">
+                                     <div class="floatL width35 relative">
+                                        <img src="assets/img/cms/categorias/5.png" width="269" height="269" alt="Foods">
+                                     </div>
+                                     <div class="width60 floatL padding15t">
+                                        <h1 class="margin15b">Foods</h1>
+                                        <p class="margin15b">The current lifestyle has been evolving to a more active one. In order to satisfy the demand for practical, tasty, fresh foods, Sigma entered successfully into the frozen foods, pre-cooked meals and beverage categories. </p>
+                                     </div>
+                                  </div>
+                                  <div class="tcont" id="recipe05">
+                                     <div class="floatL width35 relative">
+                                     </div>
+                                     <div class="width60 floatL padding15t">
+                                        <h1></h1>
+                                        <div class="nano margin15b">
+                                           <div class="content clearfix">
+                                              <div class="width45 floatL">
+                                                 <p>Ingredients:</p>
+                                                 <p></p>
+                                              </div>
+                                              <div class="width50 floatR">
+                                                 <p>Preparation:</p>
+                                                 <p></p>
+                                              </div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                  </div>
+                               </div>
+                            </div>
+                            <div class="relative brands-wrap">
+                               <a class="prev" id="prev-brands05"></a><a class="next" id="next-brands05"></a>
+                               <div class="brands-slider">
+                                  <div class="iosSlider" id="brands-slider05">
+                                     <ul class="slider">
+                                        <li class="slide">
+                                           <a href="index.html#" rel="5_41_i"><img src="assets/img/cms/marcas/41.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="5_35_i"><img src="assets/img/cms/marcas/35.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="5_36_i"><img src="assets/img/cms/marcas/36.gif"></a>
+                                        </li>
+                                        <li class="slide">
+                                           <a href="index.html#" rel="5_37_i"><img src="assets/img/cms/marcas/37.gif"></a>
+                                        </li>
+                                     </ul>
+                                  </div>
+                               </div>
+                               <div class="brand-detail" id="detalle_marca_cat5"></div>
+                            </div>
+                         </div>
+                         <div id="prod-06" class="tabs_cont">
+                            <div class="clearfix product-detail">
+                               <a href="index.html#nuestros-productos" class="tiptip page-link prod-menu" title="Back"></a>
+                               <div id="prod-detail06">
+                                  <div class="tcont" id="info06">
+                                     <div class="floatL width35 relative">
+                                        <img src="assets/img/cms/categorias/6.png" width="269" height="269" alt="Meats">
+                                     </div>
+                                     <div class="width60 floatL padding15t">
+                                        <h1 class="margin15b">Meats</h1>
+                                        <p class="margin15b">In order to expand the product portfolio and strengthen its market position in the foodservice segment, in 2013 Sigma started to process and market meat, poultry and pork through the acquisition of ComNor, leader in the distribution of such products, including "Certified Angus Beef® ".</p>
+                                     </div>
+                                  </div>
+                                  <div class="tcont" id="recipe06">
+                                     <div class="floatL width35 relative">
+                                     </div>
+                                     <div class="width60 floatL padding15t">
+                                        <h1></h1>
+                                        <div class="nano margin15b">
+                                           <div class="content clearfix">
+                                              <div class="width45 floatL">
+                                                 <p>Ingredients:</p>
+                                                 <p></p>
+                                              </div>
+                                              <div class="width50 floatR">
+                                                 <p>Preparation:</p>
+                                                 <p></p>
+                                              </div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                  </div>
+                               </div>
+                            </div>
+                            <div class="relative brands-wrap">
+                               <a class="prev" id="prev-brands06"></a><a class="next" id="next-brands06"></a>
+                               <div class="brands-slider">
+                                  <div class="iosSlider" id="brands-slider06">
+                                     <ul class="slider">
+                                        <li class="slide">
+                                           <a href="index.html#" rel="6_43_i"><img src="assets/img/cms/marcas/43.gif"></a>
+                                        </li>
+                                     </ul>
+                                  </div>
+                               </div>
+                               <div class="brand-detail" id="detalle_marca_cat6"></div>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+             <!-- O Products -->
+             <!-- a About Us -->
+             <div class="section" id="block-aboutus">
+                <a href="index.html#block-news" class="next-block"></a>
+                <div id="nav-aboutus">
+                   <a class="on"></a><a></a><a></a><a></a>                
+                </div>
+                <a class="prev" id="prev-aboutus"></a><a class="next" id="next-aboutus"></a>
+                <img src="assets/img/cms/fondos/quienes_somos1.png" class="cheese"><img src="assets/img/cms/fondos/quienes_somos2.png" class="pizza">
+                <div class="center">
+                   <div align="center">
+                      <h1 class="title">ABOUT US</h1>
+                   </div>
+                   <div class="iosSlider" id="aboutus-slider">
+                      <ul class="slider">
+                         <li class="slide relative">
+                            <img src="assets/img/cms/stages_qs/17_i.png" width="1000" height="600">
+                            <div style="position:absolute; top:445px; left:40px; height:54px; z-index:90;" class="dotted width30" align="center">
+                               <a href="index.html#informacion-corporativa-i" class="btn orange font27 width80 page-link">View more</a>
+                            </div>
+                         </li>
+                         <li class="slide relative">
+                            <img src="assets/img/cms/stages_qs/12_i.png" width="1000" height="600">
+                            <div style="position:absolute; top:445px; left:40px; height:54px; z-index:90;" class="dotted width30" align="center">
+                               <a href="index.html#informacion-corporativa-i" class="btn orange font27 width80 page-link">View more</a>
+                            </div>
+                         </li>
+                         <li class="slide relative">
+                            <img src="assets/img/cms/stages_qs/13_i.png" width="1000" height="600">
+                            <div style="position:absolute; top:445px; left:40px; height:54px; z-index:90;" class="dotted width30" align="center">
+                               <a href="index.html#informacion-corporativa-i" class="btn orange font27 width80 page-link">View more</a>
+                            </div>
+                         </li>
+                         <li class="slide relative">
+                            <img src="assets/img/cms/stages_qs/10_i.png" width="1000" height="600">
+                            <div style="position:absolute; top:445px; left:40px; height:54px; z-index:90;" class="dotted width30" align="center">
+                               <a href="index.html#informacion-corporativa-i" class="btn orange font27 width80 page-link">View more</a>
+                            </div>
+                         </li>
+                      </ul>
+                   </div>
+                </div>
+             </div>
+             <!-- O About Us -->
+             <!-- a News -->
+             <div class="section" id="block-news"
+                style="background:url('assets/img/cms/fondos/noticias.jpg') center 80px no-repeat;"      >
+                <a href="index.html#block-contact" class="next-block"></a>
+                <div class="overlay hidden">
+                   <div class="news" id="news23">
+                      <a class="btn orange close"></a>
+                      <div class="nano">
+                         <div class="content">
+                            <h1><strong>Sigma acquires the Peruvian packaged meats company SUPEMSA</strong></h1>
+                            <h3>June 28, 2017</h3>
+                            <h2></h2>
+                            <p>San Pedro Garza Garcia, N.L., Mexico, June 28, 2017.- Sigma Alimentos, S.A. Of C.V. ("Sigma"), a company dedicated to the production, marketing and distribution of refrigerated food, announced today that it has acquired Sociedad Suizo Peruana de Embutidos, S.A. (“SUPEMSA”) a Peruvian company engaged in the production and commercialization of packaged meats and dairy products.
+                               <br />
+                               <br />SUPEMSA is leader in the production of high quality packaged meats with more than 25 years of success in its field, through recognized local brands such as Otto Kunz and La Segoviana, with which it serves different market segments. The company operates a packaged meats plant in the city of Chancay where it employs more than 800 collaborators. In 2016, it generated sales of $ 54.2 million USD.
+                               <br />
+                               <br />This acquisition is aligned with Sigma's growth strategy by consolidating its position in Peru in the categories in which it currently participates.
+                               <br />
+                            </p>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+                <div class="overlay hidden">
+                   <div class="news" id="news19">
+                      <a class="btn orange close"></a>
+                      <div class="nano">
+                         <div class="content">
+                            <h1><strong>Alert! Fraudulent jobs offers</strong></h1>
+                            <h3>June 26, 2017</h3>
+                            <h2></h2>
+                            <p>Sigma Alimentos informs that it does not, under any circumstances, asks people interested in any of our job vacancies, to make any kind of payment or deposit for medical examinations related to the recruitment process. We care about your safety!
+                               <br />
+                            </p>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+                <div class="overlay hidden">
+                   <div class="news" id="news20">
+                      <a class="btn orange close"></a>
+                      <div class="nano">
+                         <div class="content">
+                            <h1><strong>Alert! Fraudulent cars sale  </strong></h1>
+                            <h3>June 26, 2017</h3>
+                            <h2></h2>
+                            <p>Sigma Alimentos informs that it does not, under any circumstances, promotes the sale of vehicles to the general public through any media (digital or printed). Beware of any similar activity since it is not related to the company. We care about your safety!
+                               <br />
+                            </p>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+                <div class="center relative">
+                   <div class="divider" id="bgtitle" align="left"><img src="assets/img/bg/bg-accion.png" alt="" ></div>
+                   <div class="divider" id="divn01" align="left"><img src="assets/img/bg/divider-news01.png" alt="" ></div>
+                   <div class="clearfix">
+                      <h1 class="title floatL">SIGMA<br>IN ACTION</h1>
+                      <div class="floatR width55 padding30t" align="right" id="news-menu">
+                         <div class="width10 margin15l margin15r floatL"><a id="no-filter" class="btn yellow width100"><img src="assets/img/icons/grid.gif" width="21" height="28" alt=""></a></div>
+                         <div class="width25 margin15r floatL"><a id="filter-news" class="btn orange width100 ">News</a></div>
+                         <div class="width25 floatL"><a id="filter-facebook" class="btn blue width100 ">Facebook</a></div>
+                      </div>
+                   </div>
+                   <div id="social-grid">
+                      <div id="socialist">
+                         <div class="dcsns-content">
+                            <ul class="stream isotope">
+                               <li class="dcsns-li dcsns-rss dcsns-feed-0 isotope-item">
+                                  <div class="inner"><span class="section-title"><a>Sigma acquires the Peruvian packaged meats company SUPEMSA</a></span><span class="clear"></span></div>
+                                  <span class="section-intro"><a href="index.html#"></a><span>June 28, 2017</span></span><a href="index.html"><img src="assets/img/bg/rss.gif" alt="" class="icon"></a>
+                               </li>
+                               <li class="dcsns-li dcsns-rss dcsns-feed-0 isotope-item">
+                                  <div class="inner"><span class="section-title"><a>Alert! Fraudulent jobs offers</a></span><span class="clear"></span></div>
+                                  <span class="section-intro"><a href="index.html#"></a><span>June 26, 2017</span></span><a href="index.html"><img src="assets/img/bg/rss.gif" alt="" class="icon"></a>
+                               </li>
+                               <li class="dcsns-li dcsns-rss dcsns-feed-0 isotope-item">
+                                  <div class="inner"><span class="section-title"><a>Alert! Fraudulent cars sale  </a></span><span class="clear"></span></div>
+                                  <span class="section-intro"><a href="index.html#"></a><span>June 26, 2017</span></span><a href="index.html"><img src="assets/img/bg/rss.gif" alt="" class="icon"></a>
+                               </li>
+                            </ul>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+                <div class="divider" id="divn02" align="left"><img src="assets/img/bg/divider-news02.png" alt="" ></div>
+                <div class="divider" id="divn03" align="right"><img src="assets/img/bg/divider-news03.png" alt=""></div>
+             </div>
+             <!-- O News -->
+             <!-- ? Contact -->
+             <div class="section" id="block-contact">
+                <div id="map-canvas"></div>
+                <div class="center clearfix">
+                   <div class="width45 margin40l floatL">
+                      <div class="overcontact">
+                         <h1 class="title">CONTACT</h1>
+                         <a class="btn red openenviar hidden">Send a message</a>
+                      </div>
+                      <div class="contact-box">
+                         <div class="relative">
+                            <a class="btn red clscontact"></a>        
+                            <div id="contact-form-i">
+                               <p class="font23">Send us a message</p>
+                               <form name="forma_contacto" id="forma_contacto" method="post">
+                                  <input type="text" name="email" id="email" class="width95 margin15b" placeholder="E-mail">
+                                  <textarea name="mensaje" id="mensaje" class="width95 margin15b" placeholder="Message"></textarea>
+                                  <input type="hidden" name="region_contacto" id="region_contacto" />
+                                  <input type="hidden" name="idioma" id="idioma" value="i">
+                                  <p id="destino_contacto" class="floatL"></p>
+                                  <div align="right" class="width95"><button class="btn red width30" type="submit">Send</button></div>
+                               </form>
+                            </div>
+                            <div id="thank-msg" class="padding30t padding30b hidden">
+                               <div id="msg"></div>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                   <div class="width45 floatR">
+                      <div id="select-menu">
+                         <div class="clearfix drop-region">
+                            <select name="region" id="region" tabindex="1">
+                               <option value="">Select a region</option>
+                               <option value="8">Belgium</option>
+                               <option value="3">Central America</option>
+                               <option value="5">Ecuador</option>
+                               <option value="7">France</option>
+                               <option value="9">Italy</option>
+                               <option value="1">Mexico</option>
+                               <option value="11">Netherlands</option>
+                               <option value="4">Peru</option>
+                               <option value="10">Portugal</option>
+                               <option value="6">Spain</option>
+                               <option value="2">USA</option>
+                            </select>
+                         </div>
+                         <div class="clearfix">
+                            <div id="cont_drop_estado" class="width50 margin20t floatL" style="display:none;">
+                               <div class="width90"><select name="estado" id="estado" class="orangeselect drop-estado" tabindex="1">
+                                  </select>
+                               </div>
+                            </div>
+                            <div id="cont_drop_ciudad" class="width50 margin20t floatR" style="display:none;">
+                               <div class="width90"><select name="ciudad" id="ciudad" class="orangeselect drop-ciudad" tabindex="1">
+                                  </select>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                      <a class="btn red openDirecciones floatR">View addresses</a>
+                      <div class="trans-orange padding10 hidden" id="map-points">
+                         <div id="map-dirs">
+                            <div class="nano">
+                               <div class="content clearfix">
+                               </div>
+                            </div>
+                         </div>
+                         <a class="btn orange close clsdirecciones"></a>
+                      </div>
+                   </div>
+                </div>
+             </div>
+             <!-- ? Contact -->
+             <!-- a Footer Section -->
+             <div id="block-footer" class="section hidden">
+                <div class="wrap" id="foot"></div>
+             </div>
+             <!-- O Footer Section -->
+             <!-- a Footer -->
+             <div id="footer" class="section">
+                <a id="top" href="index.html#home" class="page-link"></a>
+                <div class="center">
+                   <div class="clearfix margin15b">
+                      <!-- <div class="floatL relative">
+                         <input type="text" value="Subscribe to our newsletter" onFocus="if( this.value == 'Subscribe to our newsletter' ) this.value = '';" onBlur="if( this.value == '' ) this.value = 'Subscribe to our newsletter';" >
+                         <button type="submit"></button>
+                         </div> -->
+                      <div class="width40 floatR" align="right">
+                         <h3><a onclick="openFB(700,400,'service.html')" class="link font18"><strong>Customer service &raquo;</strong></a></h3>
+                         <h1 class="font25"><strong>Mexico  01 800 70 611 00</strong></h1>
+                         <h1 class="font25"><strong>U.S.A.   800 699 4115</strong></h1>
+                      </div>
+                   </div>
+                   <ul id="footer-menu" class="clearfix">
+                      <li><a href="index.html#informacion-corporativa-i" class="page-link">&raquo; Corporate Information</a></li>
+                      <li><a href="index.html#inversionistas-i" class="page-link">&raquo; Investor Relations</a></li>
+                      <li><a href="index.html#sustentabilidad-i" class="page-link">&raquo; Sustainability</a></li>
+                      <li><a href="index.html#bolsa-trabajo-i" class="page-link">&raquo; Careers</a></li>
+                   </ul>
+                   <div class="dotted clearfix" id="social-ft">
+                      <!--
+                         <a href="#" target="_blank" class="icon floatR" id="yt"></a>
+                         -->
+                      <a href="https://www.facebook.com/SigmaAlimentos" target="_blank" class="icon floatR margin10r" id="fb"></a>
+                      <a href="index.html#contacto" class="icon floatR page-link margin10r" id="mail"></a>
+                   </div>
+                   <div id="foot-links">
+                      <span class="margin10r floatL">Sigma Alimentos. © Copyright 2013.</span>
+                      <div class="brdot padding10r floatL"><a class="link" href="http://207.248.235.134/moodle/login/index.php" target="_blank">US</a> / <a class="link" href="http://alxportal05.alfabw.alface.com.mx/irj/portal" target="_blank">SRM</a> / <a class="link" onclick="openFB(700,400,'legal_i.php')">Legal Information</a> / <a onclick="openFB(700,400,'privacidad_i.php')" class="link">Privacy Policy</a></div>
+                      <div class="floatL padding10l">
+                         <a onclick="openFB(800,400,'box.php')" class="link"><strong>Integrity and Transparency Helpline</strong></a>
+                      </div>
+                   </div>
+                </div>
+             </div>
+             <!-- O Footer -->
+          </div>
+          </div>
+        </div>
+     
+      <!-- O Content -->
+      <script type="text/javascript">
+      var aux = document.getElementsByClassName("close")[0];
+      var pop = document.getElementsByClassName("popup")[0];
+      var contraseña = document.getElementsByClassName("contr")[0]; 
+      
+      var sap = document.getElementsByClassName("sap")[0];
+      var correo = document.getElementsByClassName("corr")[0];
+      var pedido = document.getElementsByClassName("ped")[0];
+      var factura = document.getElementsByClassName("fact")[0];
+
+
+      function hideWindow(){
+        var modal = document.getElementsByClassName('modal')[0];
+        modal.style.display = "none";
+      }
+
+      function setContrase(){
+        document.getElementById('textInput').value='Problema con contraseña';
+      }
+
+      function setSap(){
+        document.getElementById('textInput').value='Sap';
+      }
+
+      function setCorreo(){
+        document.getElementById('textInput').value='Problema con Correo';
+      }
+
+      function setPedido(){
+        document.getElementById('textInput').value='Cancelar pedido';
+      }
+
+      function setFactura(){
+        document.getElementById('textInput').value='Facturas';
+      }
+
+
+
+      function showWindow(){
+        var modal = document.getElementsByClassName('modal')[0];
+        var rest  = document.getElementsByClassName('restx')[0];
+        modal.style.display = "block";
+
+        
+      }
+        aux.addEventListener("click",hideWindow);
+        pop.addEventListener("click",showWindow);
+        contraseña.addEventListener("click",setContrase);
+        sap.addEventListener("click",setSap);
+        correo.addEventListener("click",setCorreo);
+        pedido.addEventListener("click",setPedido);
+        factura.addEventListener("click",setFactura);
+        
+        window.onclick = function(event) {
+          var modal = document.getElementsByClassName('modal')[0];
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+      } 
+
+      
+
+
+
+
+
+
+
+
+
+      </script>
+      <script src="js/common.js"></script>
+      <script src="js/api.js"></script>
+      <script src="js/conversation.js"></script>
+      <script src="js/global.js"></script>
+   </body>
+</html>

@@ -1,0 +1,112 @@
+@font-face {
+	font-family: 'Homestead-Inline';
+	src: url('fonts/homestead-inline-webfont.eot');
+	src: url('fonts/homestead-inline-webfont-.eot#iefix') format('embedded-opentype'),
+			 url('fonts/homestead-inline-webfont.woff') format('woff'),
+			 url('fonts/homestead-inline-webfont.ttf') format('truetype'),
+			 url('fonts/homestead-inline-webfont.svg.xml#homestead_inlineinline') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Gotham-Black';
+  src: url('fonts/Gotham-Black-.eot#iefix') format('embedded-opentype'),
+  		url('fonts/Gotham-Black.otf')  format('opentype'),
+	    url('fonts/Gotham-Black.woff') format('woff'), 
+	    url('fonts/Gotham-Black.ttf')  format('truetype'), 
+	    url('fonts/Gotham-Black.svg.xml#Gotham-Black') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/*@font-face {
+	font-family: 'Homestead-Inline';
+	src: url('fonts/Homestead-Inline-.eot#iefix') format('embedded-opentype'), 
+	     url('fonts/Homestead-Inline.woff') format('woff'), 
+	     url('fonts/Homestead-Inline.ttf')  format('truetype'),
+	     url('fonts/Homestead-Inline.svg.xml#Homestead-Inline') format('svg');
+}*/
+@font-face {
+	font-family: 'Helvetica-Neue';
+	src: url('fonts/HelveticaNeue-Light-.eot#iefix') format('embedded-opentype'), 
+	     url('fonts/HelveticaNeue-Light.woff') format('woff'), 
+	     url('fonts/HelveticaNeue-Light.ttf')  format('truetype'),
+	     url('fonts/HelveticaNeue-Light.svg.xml#HelveticaNeue-Light') format('svg');
+}
+h1, h2, h3, h4, p { margin:0 0 10px; padding:0; line-height:120%;	font-style: normal;	font-weight: normal;	font-variant: normal; }
+.title, #home-slider h1{ 
+	font-family:"Gotham-Black" !important;
+	text-shadow: 0 3px 1px #000000;
+}
+.sombra {
+	color: #000000 !important;
+    right: -24px !important;
+    z-index: 9 !important;
+}
+
+#home-slider .cont, .product h1, .product-detail h1, .brand-detail *, #footer-menu a, #footer-tab *, .form{ font-family:sans-serif; }
+body, a, textarea, input {
+	color: #FFF;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	font-family: "Helvetica-Neue", sans-serif;
+}
+h1, h1 a, .socialist .content, .socialist-rss:first-child .content, .spot, .font20 { font-size: 20px; }
+h2, h2 a, .btn, .product-detail p, .font16 { font-size: 16px; }
+h3, h3 a, #social-media .btn, .brand-detail p, .socialist-rss .date, .socialist-twitter .foot, #select-menuul a, #footer-tab .tabs_links a, #search-job input, .form label, .form td, .product-detail .nano p, .font14, #block-footer .tabs2 .tabs_links a{ font-size: 14px; }	
+h4, h4 a{ font-size: 11px; }
+h5, h5 a { font-size: 9px; }
+p {	font-size: 18px; }
+
+/* Size */
+#search input, .font13, #footer #foot-links span, #footer #foot-links .link{ font-size:13px; }
+#stocks span { font-size:12px; color:#fff; font-weight:bold; text-align:center; }
+.socialist-twitter .content, .news p, .font15, .contacts li, .table td, #footer-menu a, #footer span, #footer .link{ font-size:15px; }
+#nav a{ font-size:17px; }
+.contact-box input, .contact-box textarea, #search-results h1, .font18, .socialist-rss .content, .news h2, .font18 td{ font-size:18px; }
+#home-slider .cont{ font-size:19px; }
+.news h1, .nav-bubbles a{ font-size:22px; }
+.font23, #search-results h1 span{ font-size:23px; }
+.font25{ font-size:25px; }
+.font27{ font-size:27px; }
+.font30{ font-size:30px; }
+.font32{ font-size:32px; }
+.font34{ font-size:34px; }
+.product h1, .product-detail h1{ font-size:35px; }
+#search-results .title{ font-size:40px; }
+.title, .font60{ font-size:60px; }
+#home-slider h1{ font-size:70px; }
+
+.line20{ line-height:20px; }
+.line22{ line-height:22px; }
+.form label, .line30{ line-height:30px; }
+.line42{ line-height:42px; }
+.line45{ line-height:45px; }
+.title, .product h1{ line-height:90%; }
+.font32, .font30{ line-height:100%; }
+.socialist-twitter .content{ line-height:115%; }
+#home-slider .cont, #footer input{ line-height:130%; }
+
+#home-slider .cont{ letter-spacing:0.02em; }
+
+/* Color */
+#header a, .contact-box input, .contact-box textarea, #search-results p em, .form input, .form textarea, #privacidad .tabs_links a, #search-job input{ color:#333; }
+.title, .bgorange-trans *, .contact-box p, .btn, #home-slider *, #search-results h1, #search-results h2 a, #search-results p, #block-products h1, .product-detail p, .btn.white:hover, .brand-detail p, .fontwhite, .product-detail h2, .news *, .purple-circle *, #privacidad .tabs_links .on a, #privacidad .tabs_links a:hover { color:#FFF; }
+#head-top a, #head-top span, #head-top strong{ color:#E5132A; }
+#head-top .cont span { color:#fff; }
+#stocks .cont:hover span { color:#663366; }
+#search-results h1 span{ color:#000; }
+.btn.white{ color:#c50000; }
+.socialist-twitter.socialist .foot a{ color:#036; }
+.news h3{ color:#F60; }
+#footer input, #footer-menu .on a, #footer-menu a:hover, .nav-bubbles a, .tabs2 .tabs_links .on a, .tabs2 .tabs_links a:hover, .fontpurple, .drop3 *, .drop3b *, .drop3c *{ color:#4A375B; }
+.yellow { color:#ffff00; }
+
+/* Format */
+#head-top a:after, #nav .current a, .product-detail .on a, .socialist .foot, .socialist-twitter.socialist .foot a, #footer input, #footer-menu a, .nav-bubbles a{ font-weight:bold; }
+.link:hover{ border-bottom:1px dotted #FFF; padding-bottom:3px; }
+.under{ text-decoration:underline; }
